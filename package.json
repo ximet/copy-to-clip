@@ -1,0 +1,35 @@
+{
+  "name": "copy-to-clipboard",
+  "version": "1.0.0",
+  "description": "Copy text to the clipboard in browsers",
+  "license": "MIT",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": "ximet/copyToClipboard",
+  "author": {
+    "name": "Dmitry Bardt",
+    "email": "dq.ximet@gmail.com",
+    "url": "https://github.com/ximet"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "copy",
+    "text",
+    "clipboard",
+    "browser"
+  ],
+  "devDependencies": {
+    "xo": "*"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ]
+  }
+}
