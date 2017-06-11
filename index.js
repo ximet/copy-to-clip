@@ -1,26 +1,28 @@
-module.exports = function(input) {
-  let success = false;
+(function() {
+  var copyToClip = function(input) {
+    var success = false;
 
-  if (document.execCommand) {
-    const item = document.createElement('input');
+    if (document.execCommand) {
+      var item = document.createElement('input');
+      item.value = input;
+      item.style.display = 'none';
+      document.body.appendChild(item);
+      item.select();
 
-    item.value = input;
-    item.setAttribute('readonly', '');
-    item.style.position = 'absolute';
-    item.style.left = '-1000px';
-    item.style.fontSize = '14px';
-    document.body.appendChild(item);
-    item.select();
-
-    try {
+      try {
         success = document.execCommand('copy');
-    }
-    catch (err) {
-        console.log('Not Supported in your browser!')
+      }
+      catch (err) {
+        console.log('Not Supported!')
+      }
+
+      document.body.removeChild(item);
     }
 
-    document.body.removeChild(item);
-  }
+    return success;
+  };
 
-  return success;
-};
+  (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
+    ? module.exports = copyToClip
+    : window.copyToClip = copyToClip;
+})();
