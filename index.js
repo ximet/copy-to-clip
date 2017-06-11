@@ -1,25 +1,25 @@
-'use strict';
 module.exports = function(input) {
   	let success = false;
 
-    //check for support (http://caniuse.com/#feat=document-execcommand)
   	if (document.execCommand) {
-    		const element = document.createElement('input');
+    	const item = document.createElement('input');
 
-    		element.value = input;
-    		element.setAttribute('readonly', '');
+    	item.value = input;
+    	item.setAttribute('readonly', '');
+        item.style.position = 'absolute';
+        item.style.left = '-1000px';
+        item.style.fontSize = '14px';
+    	document.body.appendChild(item);
+    	item.select();
 
-    		document.body.appendChild(element);
-    		element.select();
-
-    		try {
-    			   success = document.execCommand('copy');
-    		}
+    	try {
+    	    success = document.execCommand('copy');
+    	}
         catch (err) {
             console.log('Not Supported in your browser!')
         }
 
-    		document.body.removeChild(element);
+    	document.body.removeChild(item);
   	}
 
   	return success;
