@@ -1,6 +1,6 @@
-# copyToClipboard
+# copy-to-clip
 [![Build Status](https://travis-ci.org/ximet/copyToClipboard.svg?branch=master)](https://travis-ci.org/ximet/copyToClipboard)
-
+[![npm version](https://badge.fury.io/js/copy-to-clip.svg)](https://www.npmjs.com/package/copy-to-clip) 
 
 Copy text to the clipboard
 

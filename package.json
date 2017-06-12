@@ -1,5 +1,5 @@
 {
-  "name": "copy-to-clipboard",
+  "name": "copy-to-clip",
   "version": "1.0.0",
   "description": "Copy text to the clipboard in browsers",
   "license": "MIT",
