@@ -1,4 +1,6 @@
 # copyToClipboard
+[![Build Status](https://travis-ci.org/ximet/copyToClipboard.svg?branch=master)](https://travis-ci.org/ximet/copyToClipboard)
+
 
 Copy text to the clipboard
 
