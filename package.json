@@ -4,7 +4,7 @@
   "description": "Copy text to the clipboard in browsers",
   "license": "MIT",
   "scripts": {
-    "test": "xo"
+    "test": "mocha ./tests/index.js"
   },
   "repository": "ximet/copyToClipboard",
   "author": {
@@ -25,11 +25,8 @@
     "browser"
   ],
   "devDependencies": {
-    "xo": "*"
-  },
-  "xo": {
-    "envs": [
-      "browser"
-    ]
+    "chai": "^3.5.0",
+    "jsdom": "^11.0.0",
+    "mocha": "^3.2.0"
   }
 }
