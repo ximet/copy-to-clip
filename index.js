@@ -3,20 +3,23 @@
     var success = false;
 
     if (document.execCommand) {
-      var item = document.createElement('input');
-      item.value = input;
-      item.style.display = 'none';
-      document.body.appendChild(item);
-      item.select();
+      var el = document.createElement('input');
+      el.value = input;
+      el.style.display = 'none';
+      document.body.appendChild(el);
+      el.select();
+
+      el.selectionStart = 0;
+      el.selectionEnd = input.length;
 
       try {
         success = document.execCommand('copy');
       }
       catch (err) {
-        console.log('Not Supported!')
+        console.error('Not Supported!')
       }
 
-      document.body.removeChild(item);
+      document.body.removeChild(el);
     }
 
     return success;
