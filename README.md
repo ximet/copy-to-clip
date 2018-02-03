@@ -8,7 +8,7 @@ Copy text to the clipboard
 
 - This module: **0,4 kB** in new version!
 - [`clipboard.js`](https://github.com/zenorocha/clipboard.js): 3.4 kB
-- [`copy-text-to-clipboard`](https://github.com/sindresorhus/copy-text-to-clipboard): 0.6 kB, but not supported in browser usages
+- [`copy-text-to-clipboard`](https://github.com/sindresorhus/copy-text-to-clipboard): 0.6 kB, but not supported in browser usages. You may check size library!
 
 
 ## Simple usage
