@@ -2,7 +2,10 @@
   var copyToClip = function(input) {
     var success = false;
 
-    if (document.execCommand) {
+    if (navigator.clipboard) {
+      success = await navigator.clipboard.readText()
+    }
+    else if (document.execCommand) {
       var el = document.createElement('input');
       el.value = input;
       el.style.display = 'none';
