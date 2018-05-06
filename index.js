@@ -3,7 +3,10 @@
     var success = false;
 
     if (navigator.clipboard) {
-      success = await navigator.clipboard.readText()
+      navigator.clipboard.readText()
+        .then(text => {
+          success = text;
+        })
     }
     else if (document.execCommand) {
       var el = document.createElement('input');
